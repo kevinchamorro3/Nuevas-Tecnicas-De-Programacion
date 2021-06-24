@@ -26,11 +26,12 @@ function promesa2(flag){
 
 (async() => {
     try {
-        var respuesta = await promesa(false);
+        var respuesta = await promesa(true);
         console.log(respuesta);
-        var respuesta2 = await promesa2(true);
+        var respuesta2 = await promesa2(false);
         console.log(respuesta2);
     } catch (error) {
         console.log(error);
     }
 })()
+console.log("Finalizando...");
