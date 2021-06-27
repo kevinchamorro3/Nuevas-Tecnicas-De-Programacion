@@ -7,5 +7,5 @@ var modifiedData= data.map((person)=>{
 var filterResult =modifiedData.filter((person)=>{
     return person.id===3
 })
-//console.log(modifiedData);
+console.log(modifiedData);
 console.log(filterResult);
