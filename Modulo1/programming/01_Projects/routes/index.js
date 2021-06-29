@@ -4,10 +4,14 @@ const { Router } = require("express");
 const router = Router();
 //trtaer data
 const data =require('../data.json')
+//Datavalidator
+const {DataValidator}=require('../middlewares/DataValidator')
+//esquema
+const { user } = require("../lib/Schema/User");
 //creacion  de los entpoint
 router
     .get("/", (req, res) => {
-        res.send("Hoala mundo con ExpresJs");
+        res.send("hola mundo");
     })
     .get("/users", (req, res) => {
         res.json({
@@ -15,7 +19,7 @@ router
             body:data
         });
     })
-    .get("/saludo", (req, res) => {
+    .get("/saludo",DataValidator("query",user), (req, res) => {
         const {
             query: { nombre, apellido },
         } = req;

@@ -13,7 +13,9 @@
   "author": "Kevin C.",
   "license": "MIT",
   "dependencies": {
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "joi": "17.4.0",
+    "join": "3.0.0"
   },
   "devDependencies": {
     "nodemon": "2.0.7"
