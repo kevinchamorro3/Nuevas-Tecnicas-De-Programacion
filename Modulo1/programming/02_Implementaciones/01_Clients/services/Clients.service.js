@@ -13,6 +13,19 @@ const findUsers = () =>
       reject(error);
     }
   });
+const createuser = (user) =>
+  new Promise(async (resolve, reject) => {
+    try {
+      const DB = await MongoConnection();
+      const clients = DB.collection(COLLECTION);
+      const result = await clients.insertOne(user);
+      resolve(result);
+    } catch (error) {
+      console.log(error);
+      reject(error);
+    }
+  });
 module.exports = {
   findUsers,
+  createuser,
 };

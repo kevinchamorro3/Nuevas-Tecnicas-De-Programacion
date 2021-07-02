@@ -2,6 +2,7 @@ const { MongoClient } = require("mongodb");
 const DB_NAME = "clients";
 const URL =`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@modulo-1.zgied.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
 console.log(URL);
+
 var MongoConenction = () =>
   new Promise(async (resolve, reject) => {
     try {
