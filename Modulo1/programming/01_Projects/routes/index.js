@@ -19,7 +19,7 @@ router
             body:data
         });
     })
-    .get("/saludo",DataValidator("query",user), (req, res) => {
+    .post("/saludo",DataValidator("query",user), (req, res) => {
         const {
             query: { nombre, apellido },
         } = req;
